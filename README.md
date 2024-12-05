@@ -31,7 +31,7 @@ We utilized datasets from NADI2020, NADI2021, and NADI2023, converting single-la
 ---
 
 ## Methodology
-### Dataset Creation
+### Dataset Creation by Pseudo-labeling 
 Three approaches were employed for dataset creation:
 1. **Logistic Regression:** Used 18 binary classifiers to assign multiple labels.
 2. **MARBERT Fine-Tuning:** Leveraged the transformer-based model pre-trained on dialectal Arabic tweets.
@@ -40,8 +40,6 @@ Three approaches were employed for dataset creation:
 ### Multi-Label Classification
 We fine-tuned MARBERT and CAMeLBERT models, implementing curriculum-based training to handle dataset imbalances and improve multi-label classification performance.
 
-### Level of Mono-Dialectness
-We introduced a metric to measure mono-dialectal influence using sigmoid function probabilities.
 
 ---
 
@@ -69,16 +67,4 @@ Future directions:
 - Multi-label dataset conversion was not manual, potentially impacting accuracy.
 - Evaluation was limited to the development set, as the test set was unavailable.
 
----
-
-## References
-- MADAR Corpus, Bouamor et al. (2018)
-- CAMeLBERT, Inoue et al. (2021)
-- MARBERT, Abdul-Mageed et al. (2021)
-- NADI 2024 Shared Task, Abdul-Mageed et al. (2024)
-
----
-
-## Citation
-If you use this work, please cite:
 
